@@ -4,12 +4,27 @@
 }
 
 body {
-    background-image: url("../images/hero.jpg");
-    background-position: top;
+    background: linear-gradient(to right bottom, #E6E6E6, #C9CDD0);
     background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
+
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 50px;
+}
+
+header a {
+    color: white;
 }
 
 a {
     text-decoration: none;
+}
+
+.row {
+    border: 1px solid black;
+    margin: 50px 0;
 }

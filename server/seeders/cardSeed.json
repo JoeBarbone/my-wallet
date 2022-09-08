@@ -1,0 +1,165 @@
+[
+    {
+        "cardTitle" : "US Bank",
+        "cardIssuer" : "US Bank",
+        "cardType" : "Credit",
+        "cardNumber" : "4435",
+        "contactPhone" : "(877) 734-8472",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Discount Tire",
+        "cardIssuer" : "Synchrony Bank",
+        "cardType" : "Credit",
+        "cardNumber" : "3384",
+        "contactPhone" : "(888) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Drivers License",
+        "cardIssuer" : "State of Florida",
+        "cardType" : "License",
+        "cardNumber" : "0240",
+        "contactPhone" : "(850) 734-8472",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Fishing License",
+        "cardIssuer" : "State of Florida",
+        "cardType" : "License",
+        "cardNumber" : "2309",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "BoA",
+        "cardIssuer" : "Bank of America",
+        "cardType" : "Debit",
+        "cardNumber" : "2929",
+        "contactPhone" : "(877) 734-8472",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Royalty Club",   
+        "cardIssuer" : "Red Robin",
+        "cardType" : "Rewards",
+        "cardNumber" : "0351",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Roadside Assistance",   
+        "cardIssuer" : "AAA",
+        "cardType" : "Membership",
+        "cardNumber" : "B429",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Health Insurance",   
+        "cardIssuer" : "Aetna",
+        "cardType" : "Insurance",
+        "cardNumber" : "5505",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "Auto Insurance",   
+        "cardIssuer" : "State Farm",
+        "cardType" : "Insurance",
+        "cardNumber" : "5505",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "example@example.com"
+
+    },
+    {
+        "cardTitle" : "US Bank",
+        "cardIssuer" : "US Bank",
+        "cardType" : "Credit",
+        "cardNumber" : "4435",
+        "contactPhone" : "(877) 734-8472",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Discount Tire",
+        "cardIssuer" : "Synchrony Bank",
+        "cardType" : "Credit",
+        "cardNumber" : "3384",
+        "contactPhone" : "(888) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Drivers License",
+        "cardIssuer" : "State of Florida",
+        "cardType" : "License",
+        "cardNumber" : "0240",
+        "contactPhone" : "(850) 734-8472",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Fishing License",
+        "cardIssuer" : "State of Florida",
+        "cardType" : "License",
+        "cardNumber" : "2309",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "BoA",
+        "cardIssuer" : "Bank of America",
+        "cardType" : "Debit",
+        "cardNumber" : "2929",
+        "contactPhone" : "(877) 734-8472",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Royalty Club",   
+        "cardIssuer" : "Red Robin",
+        "cardType" : "Rewards",
+        "cardNumber" : "0351",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Roadside Assistance",   
+        "cardIssuer" : "AAA",
+        "cardType" : "Membership",
+        "cardNumber" : "B429",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Health Insurance",   
+        "cardIssuer" : "Aetna",
+        "cardType" : "Insurance",
+        "cardNumber" : "5505",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    },
+    {
+        "cardTitle" : "Auto Insurance",   
+        "cardIssuer" : "State Farm",
+        "cardType" : "Insurance",
+        "cardNumber" : "5505",
+        "contactPhone" : "(850) 231-3495",
+        "email" : "joebarbone@ucf.edu"
+
+    }
+
+]

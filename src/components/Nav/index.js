@@ -18,9 +18,9 @@ function Nav() {
 
                 <NavLink className="mx-3" to="/">Home</NavLink>
 
-                {/* <NavLink className="mx-3" to="/portfolio">Portfolio</NavLink> */}
+                <NavLink className="mx-3" to="/login">Login</NavLink>
 
-                {/* <NavLink className="mx-3" to="/contact">Contact</NavLink> */}
+                <NavLink className="mx-3" to="/signup">Signup</NavLink>
 
                 {/* <NavLink className="mx-3" to="/resume">Resume</NavLink> */}
            

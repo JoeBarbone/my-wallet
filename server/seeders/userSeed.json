@@ -1,0 +1,16 @@
+[
+    { 
+        "firstName" : "Example", 
+        "lastName" : "Example",
+        "email" : "example@example.com", 
+        "password" : "Welcome1", 
+        "cards" : [] 
+    },
+    { 
+        "firstName" : "Joe", 
+        "lastName" : "Barbone",
+        "email" : "joebarbone@ucf.edu", 
+        "password" : "Welcome1", 
+        "cards" : [] 
+    }
+]
