@@ -1,4 +1,4 @@
-const { User, Card } = require("../models");
+const { User } = require("../models");
 
 const resolvers = {
     Query: {
@@ -7,13 +7,6 @@ const resolvers = {
 
         const params = email ? { email } : {};
         return User.find(params).sort({ lastName: -1 });
-
-      },
-
-      cards: async (parent, { email }) => {
-
-        const params = email ? { email } : {};
-        return Card.find(params).sort({ cardTitle: -1 });
 
       }
     }

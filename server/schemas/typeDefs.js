@@ -15,35 +15,18 @@ type User {
 
 
 
-type Card {
-
-    _id: ID
-    cardTitle: String
-    cardIssuer: String
-    cardType: String
-    cardNumber: String
-    contactPhone: String
-    email: String
-
-  }
-
-  
 
 
-  type Query {
-  
-    users(email: String): [User]
-  
-  }
+type Query {
+
+  users(email: String): [User]
+
+}
 
 
-  type Query {
-  
-    cards(email: String): [Card]
-  
-  }
 
-  `;
+
+`;
 
 
 module.exports = typeDefs;
