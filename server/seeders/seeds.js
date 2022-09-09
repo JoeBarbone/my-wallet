@@ -5,27 +5,37 @@ const db = require('../config/connection');
 const { Card, User } = require('../models');
 
 db.once('open', async () => {
-  try {
+  // try {
+    
     await Card.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    const users = await User.create(userSeeds);
+    const cards = await User.create(cardSeeds);
 
-    for (let i = 0; i < cardSeeds.length; i++) {
-      const { _id, cardIssuer, cardType, contactPhone } = await Card.create(cardSeeds[i]);
-      // const user = await User.findOneAndUpdate(
-      //   { username: thoughtAuthor },
-      //   {
-      //     $addToSet: {
-      //       thoughts: _id,
-      //     },
-      //   }
-      // );
-    }
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
+
+    // await User.find().then(users => {
+
+      users.forEach(async (user) => {
+
+
+        // await User.findByIdAndUpdate({email: user.email}, { $push:{"cards": cardSeeds} }, {new: true} );
+        cardSeeds.forEach(async card => {
+          const tempCard = cards[i]
+          tempCard.push(card.email);
+          await user.save();
+        
+        })
+        
+
+      })
+
+    // })
+
+  // } catch (err) {
+    //console.error(err);
+    //process.exit(1);
+  // }
 
   console.log('all done!');
   process.exit(0);

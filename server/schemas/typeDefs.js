@@ -14,12 +14,31 @@ type User {
 }  
 
 
+type Card {
 
+  _id: ID
+  cardTitle: String
+  cardIssuer: String
+  cardType: String
+  cardNumber: String
+  contactPhone: String
+  email: String
+
+}
 
 
 type Query {
 
-  users(email: String): [User]
+  users: [User]
+  cards: [Card]
+  card(email: String): Card
+  
+}
+
+
+type Mutation {
+
+  addCard(email: String!, cardTitle: String!, cardIssuer: String!, cardType: String!, cardNumber: String!, contactPhone: String!): [Card]
 
 }
 
