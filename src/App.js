@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 // import Resume from "./components/Resume";
 import Footer from "./components/Footer";
+import Cards from "./components/Cards"
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
-                {/* <Route path="/resume" element={<Resume />} /> */}
+                <Route path="/cards" element={<Cards />} />
                   
           </Routes>
           <Footer></Footer>

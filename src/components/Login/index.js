@@ -9,13 +9,13 @@ function Login() {
             
             <div className="row">
             
-                <div className="col p-4">
+                <div className="col col-sm-12 col-md-6 col-lg-4 p-0 mx-auto">
             
-                    <div>
+                    <div className="page-title p-2">
                         <h1>Login</h1>
                     </div>
 
-                    <div>
+                    <div className="page-data p-3">
                         <p><input className="p-2" type="email" placeholder="email address" /></p>
                         <p><input className="p-2" type="password" placeholder="password" /></p>
                         <button className="btn btn-primary">Login</button>

@@ -22,7 +22,7 @@ function Nav() {
 
                 <NavLink className="mx-3" to="/signup">Signup</NavLink>
 
-                {/* <NavLink className="mx-3" to="/resume">Resume</NavLink> */}
+                <NavLink className="mx-3" to="/cards">Cards</NavLink>
            
             </nav>
 
