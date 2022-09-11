@@ -31,14 +31,16 @@ type Query {
 
   users: [User]
   cards: [Card]
-  card(email: String): Card
+  card(email: String): [Card]
   
 }
 
 
 type Mutation {
 
-  addCard(email: String!, cardTitle: String!, cardIssuer: String!, cardType: String!, cardNumber: String!, contactPhone: String!): [Card]
+  login(email: String!, password: String!): User
+  addUser(firstName: String!, lastName: String!, email: String!, password: String!): User
+  addCard(email: String!, cardTitle: String!, cardIssuer: String!, cardType: String!, cardNumber: String!, contactPhone: String!): Card
 
 }
 

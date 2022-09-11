@@ -1,4 +1,6 @@
+const { AuthenticationError } = require("apollo-server-express");
 const { User, Card } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
@@ -6,10 +8,8 @@ const resolvers = {
       users: async (parent, { email }) => {
 
         const params = email ? { email } : {};
-        return User.find(params).sort({ lastName: -1 })
-          .populate("cards");
+        return User.find(params).sort({ lastName: -1 });
           
-
       },
 
       cards: async () => {
@@ -21,7 +21,8 @@ const resolvers = {
 
       card: async (parent, { email }) => {
 
-        return await Card.findOne( { "email": email } );
+        return await Card.find( { "email": email } );
+
       }
 
     },
@@ -29,9 +30,47 @@ const resolvers = {
 
     Mutation: {
 
-      addCard: async (parent, args) => {
+      addUser: async (parent, args) => {
 
-        return User.findOneAndUpdate({email: args.email}, {$push: {"cards": args}}, {new: true} );
+        const user = await User.create(args);
+        const token = signToken(user);
+
+        return { token, user };
+
+      },
+
+      login: async (parent, { email, password }) => {
+
+        const user = await User.findOne({ email });
+
+        if (!user) {
+
+          throw new AuthenticationError("Incorrect credentials");
+        
+        }
+
+        const correctPw = await user.isCorrectPassword(password);
+
+        if (!correctPw) {
+
+          throw new AuthenticationError("Incorrect credentials");
+
+        }
+
+        // JWT not working for some reason. These have been commented out
+        // const token = signToken(user);
+        // return { token, user };
+
+        return user;
+
+      },
+
+      addCard: async (parent, args) => {
+        const card = await Card.create(args);
+
+        return card
+
+        // return User.findOneAndUpdate({email: args.email}, {$push: {"cards": args}}, {new: true} );
 
       }
     }
