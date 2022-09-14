@@ -10,6 +10,7 @@ import Signup from "./components/Signup";
 import Footer from "./components/Footer";
 import Cards from "./components/Cards";
 import Add from "./components/Add";
+import Update from "./components/Update";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cards" element={<Cards />} />
                 <Route path="/addCard" element={<Add />} />
+                <Route path="/update" element={<Update />} />
                   
           </Routes>
           <Footer></Footer>

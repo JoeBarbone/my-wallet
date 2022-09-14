@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Edit() {
+function Update() {
 
     return(
             
@@ -12,7 +12,7 @@ function Edit() {
                 <div className="col col-sm-12 col-md-8 col-lg-6 p-0 mx-auto">
             
                     <div className="page-title p-2">
-                        <h1>Edit Card</h1>
+                        <h1>Update Card</h1>
                     </div>
 
                     <div className="page-data p-3">
@@ -22,7 +22,7 @@ function Edit() {
                         <p><input className="p-2" type="text" name="cardNumber" placeholder="last four characters" /></p>
                         <p><input className="p-2" type="text" name="contactPhone" placeholder="contact phone" /></p>
                         <button className="btn btn-danger">Cancel</button>
-                        <button className="btn btn-primary">Update Card</button>
+                        <button className="btn btn-primary mx-2">Update Card</button>
                     </div>
 
                 </div>
@@ -37,4 +37,4 @@ function Edit() {
 
 }
 
-export default Add;
+export default Update;

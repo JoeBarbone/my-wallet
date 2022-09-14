@@ -22,11 +22,11 @@ function Nav() {
 
             <NavLink className="mx-3" to="/login">Login</NavLink>
 
-            {/* <NavLink className="mx-3" to="/signup">Signup</NavLink> */}
-
             <NavLink className="mx-3" to="/cards">Cards</NavLink>
+            
             <NavLink className="mx-3" to="/addCard">Add</NavLink>
 
+            <NavLink className="mx-3" to="/update">Update</NavLink>
         </nav>
 
     </header>

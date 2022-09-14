@@ -22,7 +22,7 @@ function Add() {
                         <p><input className="p-2" type="text" name="cardNumber" placeholder="last four characters" /></p>
                         <p><input className="p-2" type="text" name="contactPhone" placeholder="contact phone" /></p>
                         <button className="btn btn-danger">Cancel</button>
-                        <button className="btn btn-primary">Save Card</button>
+                        <button className="btn btn-primary mx-2">Save Card</button>
                     </div>
 
                 </div>
