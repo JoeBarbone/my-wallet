@@ -8,7 +8,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 // import Resume from "./components/Resume";
 import Footer from "./components/Footer";
-import Cards from "./components/Cards"
+import Cards from "./components/Cards";
+import Add from "./components/Add";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/cards" element={<Cards />} />
+                <Route path="/addCard" element={<Add />} />
                   
           </Routes>
           <Footer></Footer>

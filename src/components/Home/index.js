@@ -13,12 +13,12 @@ function Home() {
             
             <div className="container">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-sm-12 col-md-4">
-                        <img src={heroPic} className="img-fluid img-responsive my-3" alt="worried girl biting her nail" />
+                    <div className="col-sm-12 col-md-4 my-4 hero-img">
+                        <img src={heroPic} className="img-fluid rounded-circle img-responsive my-3" alt="worried girl biting her nail" />
                     </div>
 
 
-                    <div className="col-sm-12 col-md-4 d-flex flex-column justify-content-center">
+                    <div className="col-sm-12 col-md-4 d-flex flex-column justify-content-center hero-text">
                         <h1>
                             <p className="home-text">What would you do?</p>
                         </h1>
@@ -33,6 +33,7 @@ function Home() {
                 </div>
             </div>
 
+        
 
 
 

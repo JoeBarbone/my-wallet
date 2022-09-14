@@ -7,7 +7,7 @@ function Signup() {
             
         <div className="container">
             
-            <div className="row">
+            <div className="row p-2">
             
                 <div className="col col-sm-12 col-md-6 col-lg-4 p-0 mx-auto">
             
@@ -20,7 +20,7 @@ function Signup() {
                         <p><input className="p-2" type="text" name="last" placeholder="last name" /></p>
                         <p><input className="p-2" type="email" name="address" placeholder="email address" /></p>
                         <p><input className="p-2" type="password" name="password" placeholder="password" /></p>
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">Signup</button>
                     </div>
 
                 </div>

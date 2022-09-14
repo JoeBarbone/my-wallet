@@ -8,7 +8,9 @@ const resolvers = {
       users: async (parent, { email }) => {
 
         const params = email ? { email } : {};
-        return User.find(params).sort({ lastName: -1 });
+        return User.find(params)
+          .populate({path:"cards"})
+          .sort({ lastName: -1 });
           
       },
 
@@ -67,10 +69,11 @@ const resolvers = {
 
       addCard: async (parent, args) => {
         const card = await Card.create(args);
-
-        return card
-
-        // return User.findOneAndUpdate({email: args.email}, {$push: {"cards": args}}, {new: true} );
+        console.log(card);
+        
+        User.findOneAndUpdate({email: args.email}, {$push: {"cards": card._id}}, {new: true} ).then(() => {
+          return card;
+        });
 
       }
     }

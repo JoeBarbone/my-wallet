@@ -7,7 +7,7 @@ function Login() {
 
         <div className="container">
             
-            <div className="row">
+            <div className="row p-2">
             
                 <div className="col col-sm-12 col-md-6 col-lg-4 p-0 mx-auto">
             
