@@ -24,6 +24,8 @@ a {
     text-decoration: none;
 }
 
+
+
 .col {
     border: 1px solid black;
     margin: 50px 0;
@@ -60,8 +62,13 @@ footer {
     text-align: right;
 }
 
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
     #home-tagline {
-        display: none;
+        xdisplay: none;
+        /* font-size: .50rem; */
     }
-} */
+
+    .my-title {
+        font-size: 1rem;
+    }
+}

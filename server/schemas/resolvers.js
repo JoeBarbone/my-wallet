@@ -5,6 +5,24 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
     Query: {
 
+      me: async (parent, args, context) => {
+
+        if (context.user) {
+          const userData = await User.findOne({ email: context.user.email })
+            .select("-__v -password")
+            .populate("cards");
+
+          return userData;
+      
+        } else {
+      
+        throw new AuthenticationError("Not logged in!");
+      }
+      
+      },
+
+
+
       users: async (parent, { email }) => {
 
         const params = email ? { email } : {};
@@ -60,18 +78,32 @@ const resolvers = {
         }
 
         // JWT not working for some reason. These have been commented out
-        // const token = signToken(user);
-        // return { token, user };
+        const token = signToken(user);
+        return { token, user };
 
-        return user;
+        // return user;
 
       },
 
-      addCard: async (parent, args) => {
-        const card = await Card.create(args);
+      addCard: async (parent, { email, cardTitle, cardIssuer, cardType, cardNumber, contactPhone }) => {
+      // addCard: async (parent, a/rgs) => {
+
+        const card = await Card.create({
+        
+          email,  
+          cardTitle,
+          cardIssuer,
+          cardType,
+          cardNumber,
+          contactPhone
+        
+        });
+        
         console.log(card);
         
-        User.findOneAndUpdate({email: args.email}, {$push: {"cards": card._id}}, {new: true} ).then(() => {
+        // User.findOneAndUpdate({email: args.email}, {$push: {"cards": card._id}}, {new: true} ).then(() => {
+        User.findOneAndUpdate({email: email}, {$push: {"cards": card._id}}, {new: true} ).then(() => {
+
           return card;
         });
 

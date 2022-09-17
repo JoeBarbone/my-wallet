@@ -26,9 +26,17 @@ type Card {
 
 }
 
+type Auth {
+
+  token: ID!
+  user: User
+
+}
+
 
 type Query {
 
+  me: User
   users: [User]
   cards: [Card]
   card(email: String): [Card]
@@ -38,8 +46,8 @@ type Query {
 
 type Mutation {
 
-  login(email: String!, password: String!): User
-  addUser(firstName: String!, lastName: String!, email: String!, password: String!): User
+  login(email: String!, password: String!): Auth
+  addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
   addCard(email: String!, cardTitle: String!, cardIssuer: String!, cardType: String!, cardNumber: String!, contactPhone: String!): Card
 
 }
