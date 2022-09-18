@@ -58,7 +58,7 @@ function App() {
                   <Route element={<PrivateRoutes />}>
                     <Route path="/cards" element={<Cards />} />
                     <Route path="/addCard" element={<Add />} />
-                    <Route path="/update" element={<Update />} />
+                    <Route path="/update/:id" element={<Update />} />
                   </Route>  
             </Routes>
             <Footer></Footer>

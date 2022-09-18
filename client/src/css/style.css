@@ -79,6 +79,11 @@ footer p {
     padding: 0;
 }
 
+.errors {
+    text-align: center;
+    color: red;
+}
+
 /* .navbar-text {
     color: white;
     font-size: 1.25rem;

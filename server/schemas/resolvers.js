@@ -107,8 +107,32 @@ const resolvers = {
           return card;
         });
 
+      },
+
+
+      updateCard: async (parent, args) => {
+          
+          Card.findOneAndUpdate({_id: args._id}, {...args} ).then((card) => {
+  
+            return card;
+
+          });
+  
+      },
+
+      deleteCard: async (parent, args) => {
+
+        Card.findOneAndUpdate({_id: args._id}, {...args} ).then((card) => {
+  
+          return card;
+
+        });
+        
       }
+        
     }
+
+    
   };
   
   module.exports = resolvers;

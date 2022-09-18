@@ -145,7 +145,7 @@ const Add = () => {
                         </div>
                     
                     </form>
-                    {error && <div>add new card failed</div>}
+                    {error && <div className="errors">add new card failed</div>}
                     {!error && <div>new card added succsssfully</div>}
                 </div>
             

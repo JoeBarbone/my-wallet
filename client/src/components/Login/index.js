@@ -30,9 +30,9 @@ const Login = (props) => {
                 variables: { ...formState }
             });
 
-            Auth.login(data.login.token);
+            Auth.login(data.login.token, data.login.user);
 
-            // navigate("/cards");
+            
         
         } catch (e) {
             console.error(e);
@@ -87,7 +87,7 @@ const Login = (props) => {
                             <button className="btn btn-primary">Login</button> */}
                         </div>
                     </form>
-                    {error && <div>Login failed</div>}
+                    {error && <div className="errors">Login failed</div>}
                 </div>
             
             </div>

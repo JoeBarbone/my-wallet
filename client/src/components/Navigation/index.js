@@ -39,7 +39,7 @@ function Navigation() {
             {Auth.loggedIn() ? (
                 <>
                 {/* try to display logged in user here */}
-                <Nav.Link className="navbar-text">WTF</Nav.Link>
+                <Nav.Link className="navbar-text">{Auth.getProfile()?.email}</Nav.Link>
                 
                 
                 <Nav.Link className="navbar-text" href="/cards">Home</Nav.Link>

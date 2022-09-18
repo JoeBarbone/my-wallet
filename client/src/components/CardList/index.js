@@ -1,16 +1,43 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import Auth from "../../utils/auth";
+import { DELETE_CARD } from "../../utils/mutations";
 
 
 // const CardList = ({ cards, cardTitle, cardIssuer, cardTitle, cardType, cardNumber, contactPhone }) => {
 const CardList = ({ cards, cardTitle, cardIssuer, cardType, cardNumber, contactPhone, email }) => {
-  
+    console.log(`Cards: ${cards.cardTitle}`);
     const [ isUpdated, setIsUpdated ] = useState(false);
-  
-  if (!cards.length) {
-    return <h3>No cards for this user</h3>;
+    const user = Auth.getProfile();
+
+    const userCards = cards.filter((card) => card.email === user?.email);
+    const [deleteCard, { error }] = useMutation(DELETE_CARD);
+
+
+    if (!cards.length) {
+    // why doesn't this work?
+    return <h3>No cards for this user: {user?.email}</h3>;
   }
 
+
+  const deleteCardInfo = async (cardID) => {
+
+    try {
+
+        await deleteCard({
+            
+            variables: {...formState, _id: cardID}
+
+        })
+
+    } catch (error) {
+
+        console.log(error);
+    
+    }
+
+    navigate("/cards");
+    window.location.reload();
+}
     
 
   return (
@@ -25,10 +52,11 @@ const CardList = ({ cards, cardTitle, cardIssuer, cardType, cardNumber, contactP
                 <h3>{cardTitle}</h3>
                 
                 
-                {cards &&
-                    cards.map(card => (
+                {userCards &&
+                    userCards.map(card => (
                         
                             <div key={card._id} className="card mb-3">
+                        
 
                                 {!isUpdated ?
                                 <div>
@@ -41,6 +69,8 @@ const CardList = ({ cards, cardTitle, cardIssuer, cardType, cardNumber, contactP
                                         <p><span>Number</span> {card.cardNumber}</p>
                                         <p><span>Contact</span> {card.contactPhone}</p>
                                         <p><span>Email</span> {card.email}</p>
+                                        <p><span>RecordID </span><a href={"/update/" + card._id}>{card._id}</a></p>
+
                                         <div className="action-buttons">
                                             <button onClick={() => setIsUpdated(!isUpdated)} className="btn btn-primary mx-2">Update</button>
                                             <button className="btn btn-danger">Delete</button>
