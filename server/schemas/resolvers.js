@@ -122,12 +122,12 @@ const resolvers = {
 
       deleteCard: async (parent, args) => {
 
-        Card.findOneAndUpdate({_id: args._id}, {...args} ).then((card) => {
+        Card.findOneAndDelete({_id: args._id}, {...args} ).then((card) => {
   
           return card;
 
         });
-        
+
       }
         
     }

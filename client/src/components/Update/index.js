@@ -47,7 +47,7 @@ function Update() {
 
         navigate("/cards");
         window.location.reload();
-        
+
     }
 
 
@@ -72,7 +72,7 @@ function Update() {
                             <p><input onChange={handleChange} className="p-2" type="text" name="cardNumber" defaultValue={card.cardNumber} /></p>
                             <p><input onChange={handleChange} className="p-2" type="text" name="contactPhone" defaultValue={card.contactPhone} /></p>
                             <button onClick={() => navigate("/cards")} className="btn btn-danger">Cancel</button>
-                            <button onClick={() => updateCardInfo(card._id)}className="btn btn-primary mx-2">Update</button>
+                            <button onClick={() => updateCardInfo(card._id)} className="btn btn-primary mx-2">Update</button>
                         </div>    
                     )) }
                     
