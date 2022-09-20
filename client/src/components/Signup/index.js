@@ -34,17 +34,15 @@ const Signup = () => {
                 variables: { ...formState },
             });
 
-            Auth.login(data.addUser.token);
+            // this adds a new user to the database, then logs them in with data.AddUser.user by using the addUser.user info
+            Auth.login(data.addUser.token, data.addUser.user);
+
         } catch (e) {
             console.error(e);
         }
     };
-// }
 
 
-
-// to return to original delete everything from line #5 to here, uncomment line #43, remove lines #56 to #70, remove line #77
-// function Signup() {
 
     return(
             
@@ -100,12 +98,6 @@ const Signup = () => {
                             />
                             
                             
-                            
-                            
-                            {/* <p><input className="p-2" type="text" name="first" placeholder="first name" /></p>
-                            <p><input className="p-2" type="text" name="last" placeholder="last name" /></p>
-                            <p><input className="p-2" type="email" name="address" placeholder="email address" /></p>
-                            <p><input className="p-2" type="password" name="password" placeholder="password" /></p> */}
                             <button className="btn btn-primary my-3">Signup</button>
                         </div>
                     </form>

@@ -6,7 +6,12 @@ import Auth from "../../utils/auth"
 
 // function Add() {
 
+
+
+
 const Add = () => {
+
+    const user = Auth.getProfile();
 
     const [formState, setFormState] = useState({
         cardTitle: "",
@@ -14,9 +19,13 @@ const Add = () => {
         cardType: "",
         cardNumber: "",
         contactPhone: "",
-        email: ""
+        email: user.email
     });
 
+    
+    
+    console.log(`User Email: ${user.email}`);    
+    
     const [addCard, { error }] = useMutation(ADD_CARD);
 
     // update state based on form input changes
@@ -62,9 +71,9 @@ const Add = () => {
 
 
     return(
-            
+          
         <div className="container">
-            
+        
             <div className="row p-2">
             
                 <div className="col col-sm-12 col-md-8 col-lg-6 p-0 mx-auto">
@@ -125,28 +134,22 @@ const Add = () => {
                                 // onChange={handleChange}
                             />
 
-                            <input
-                                className="form-input my-2 p-2"
-                                placeholder="Email"
-                                name="email"
-                                type="email"
-                                id="email"
-                                // value={formState.email}
-                                // onChange={handleChange}
-                            />
+                            {/* <input */}
+                                {/* className="form-input my-2 p-2" */}
+                                {/* placeholder="Email" */}
+                                {/* name="email" */}
+                                {/* type="email" */}
+                                {/* id="email" */}
+                                {/* // value={formState.email} */}
+                                {/* // onChange={handleChange} */}
+                            {/* /> */}
 
-
-                            {/* <input className="p-2" type="text" name="cardIssuer" placeholder="card issuer" />
-                            <input className="p-2" type="text" name="cardType" placeholder="card type (Debit, Credit, License, Rewards, Insurance or Membership)" />
-                            <input className="p-2" type="text" name="cardNumber" placeholder="last four characters" />
-                            <input className="p-2" type="text" name="contactPhone" placeholder="contact phone" /> */}
-                            {/* <button className="btn btn-danger">Cancel</button> */}
                             <button type="submit" className="btn btn-primary mx-2">Save</button>
                         </div>
                     
                     </form>
                     {error && <div className="errors">add new card failed</div>}
-                    {!error && <div>new card added succsssfully</div>}
+                    {/* {!error && <div>new card added succsssfully</div>} */}
                 </div>
             
             </div>

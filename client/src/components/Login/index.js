@@ -81,10 +81,6 @@ const Login = (props) => {
                             />
                             <button className="btn btn-primary xd-block xw-100 my-3" type="submit">Login</button>
                             
-                            
-                            {/* <p><input className="p-2" type="email" placeholder="email address" /></p>
-                            <p><input className="p-2" type="password" placeholder="password" /></p>
-                            <button className="btn btn-primary">Login</button> */}
                         </div>
                     </form>
                     {error && <div className="errors">Login failed</div>}
