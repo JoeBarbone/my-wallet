@@ -58,7 +58,7 @@ function Update() {
             
             <div className="row p-2">
             
-                <div className="col col-sm-12 col-md-8 col-lg-6 p-0 mx-auto">
+                <div className="col box col-sm-12 col-md-8 col-lg-6 p-0 mx-auto">
             
                     <div className="page-title p-2">
                         <h1>Update Card</h1>

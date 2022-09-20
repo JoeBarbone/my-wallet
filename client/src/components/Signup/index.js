@@ -50,7 +50,7 @@ const Signup = () => {
             
             <div className="row p-2">
             
-                <div className="col col-sm-12 col-md-6 col-lg-4 p-0 mx-auto">
+                <div className="col box col-sm-12 col-md-6 col-lg-4 p-0 mx-auto">
             
                     <div className="page-title p-2">
                         <h1>Signup</h1>

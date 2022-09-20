@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const CardList = ({ cards, cardTitle, cardIssuer, cardType, cardNumber, contactPhone, email }) => {
-    // console.log(`Cards: ${cards.cardTitle}`);
+    
     const [ isUpdated, setIsUpdated ] = useState(false);
     const user = Auth.getProfile();
 
@@ -54,48 +54,42 @@ const CardList = ({ cards, cardTitle, cardIssuer, cardType, cardNumber, contactP
     <Container>
         
         <Row>
-        
-            <Col sm={12} lg={4} className="mx-auto my-5">
+            
+            {userCards &&
+                userCards.map(card => (
+                    <Col sm={12} lg={4} className="mx-auto my-3">
+                    
+                        <div key={card._id} className="card">
+                    
+                            <div>
 
-                {/* cardTitle set on line #23 of Cards/index.js */}
-                {/* <h3>{cardTitle}</h3> */}
-                
-                {userCards &&
-                    userCards.map(card => (
-                        
-                            <div key={card._id} className="card mb-3">
-                        
-                                <div>
+                                <p className="card-header">
+                                    <br/>
+                                    <h4>{card.cardTitle}</h4> <br />
+                                </p>
 
-                                    <p className="card-header">
-                                        <br/>
-                                        <h4>{card.cardTitle}</h4> <br />
-                                    </p>
+                                <div className="card-body">
+                                    <p><span>Issuer</span> <span className='text-color'>{card.cardIssuer}</span></p>
+                                    <p><span>Type</span> <span className='text-color'>{card.cardType}</span></p>
+                                    <p><span>Number</span> <span className='text-color'>{card.cardNumber}</span></p>
+                                    <p><span>Contact</span> <span className='text-color'>{card.contactPhone}</span></p>
+                                    {/* <p><span>Email</span> <span className='text-color'>{card.email}</span></p> */}
+                                    {/* <p><span>RecordID </span><a href={"/update/" + card._id}>{card._id}</a></p> */}
+                                    {/* <p><span>RecordID </span> <span className='text-color'>{card._id}</span></p> */}
+                                    <hr />
 
-                                    <div className="card-body">
-                                        <p><span>Issuer</span> <span className='text-color'>{card.cardIssuer}</span></p>
-                                        <p><span>Type</span> <span className='text-color'>{card.cardType}</span></p>
-                                        <p><span>Number</span> <span className='text-color'>{card.cardNumber}</span></p>
-                                        <p><span>Contact</span> <span className='text-color'>{card.contactPhone}</span></p>
-                                        {/* <p><span>Email</span> <span className='text-color'>{card.email}</span></p> */}
-                                        {/* <p><span>RecordID </span><a href={"/update/" + card._id}>{card._id}</a></p> */}
-                                        {/* <p><span>RecordID </span> <span className='text-color'>{card._id}</span></p> */}
-                                        <hr />
-
-                                        <div className="action-buttons">
-                                            <a href={"/update/" + card._id}><button onClick={() => setIsUpdated(!isUpdated)} className="btn btn-primary mx-2">Update</button></a>
-                                            <button onClick={() => deleteCardInfo(card._id)} className="btn btn-danger">Delete</button>
-                                        </div>
+                                    <div className="action-buttons">
+                                        <a href={"/update/" + card._id}><button onClick={() => setIsUpdated(!isUpdated)} className="btn btn-primary mx-2">Update</button></a>
+                                        <button onClick={() => deleteCardInfo(card._id)} className="btn btn-danger">Delete</button>
                                     </div>
-                                
                                 </div>
-                                
+                            
                             </div>
-                        
-                    ))
-                }
-                
-            </Col>
+                            
+                        </div>
+                    </Col>            
+                ))
+            }
 
         </Row>
     
