@@ -16,7 +16,7 @@ import Navigation from "./components/Navigation";
 import PrivateRoutes from './utils/PrivateRoute';
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
