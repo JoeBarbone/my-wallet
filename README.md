@@ -3,6 +3,8 @@ This is the final project required to complete the bootcamp. The idea for this p
 
 The purpose of this app is to create a simple place that will contain the contents of your wallet. In the event that you really do lose your wallet, you will know exactly who to contact and how.
 
+---
+
 ## User Story
 
 AS A user, I am looking for a web app to store my wallet contents  
@@ -13,22 +15,59 @@ AS A user, I worry about security
 
 I WANT an app that is safe and does not store personal identifying information such as card numbers, experation dates or safety codes
 
+---
+
 ## Acceptance Criteria
 
 WHEN I visit the website  
+
 THEN I am presented with a main page with a small blurb about the app and an option to login or signup   
+
 WHEN I signup  
+
 THEN I will see a signup page asking for first name, last name, email address and password  
+
 WHEN I login    
+
 THEN I will see a screen that contains my "cards"  
+
 WHEN I select "add", I will be presented with a screen to add card title, card issuer, card type and card number  
+
 WHEN I select "save" after adding the new card information, the new card information will be saved to the current users card list  
+
 WHEN I click "update", I will be able to update card title, card issuer, card type and card number  
+
 WHEN I click "delete" the selected card will be removed
+
+---
 
 ## Screenshots
 
+Desktop Main Menu
+![desktop main menu](/images/screenshot-desktop-mainmenu.jpg)
+
+Desktop Signup Screen
+![desktop signup](/images/screenshot-desktop-signup.jpg)
+
+Desktop Login Screen
+![desktop login](/images/screenshot-desktop-login.jpg)
+
+Mobile Main Menu  
+![desktop main menu](/images/screenshot-mobile-mainmenu.jpg)
+
+Mobile Signup Screen  
+![desktop signup](/images/screenshot-mobile-signup.jpg)
+
+Mobile Login Screen  
+![desktop login](/images/screenshot-mobile-login.jpg)
+
+---
+
 ## Live Site
+
+https://mighty-thicket-71293.herokuapp.com/
+
+---
 
 ![html 5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![css 3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![GraphQL](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![apollo](https://img.shields.io/badge/Apollo%20GraphQL-311C87?&style=for-the-badge&logo=Apollo%20GraphQL&logoColor=white)
 
