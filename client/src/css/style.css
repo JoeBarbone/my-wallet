@@ -9,7 +9,10 @@ body {
 
     background: linear-gradient(to right bottom, #E6E6E6, #C9CDD0);
     background-repeat: no-repeat;
-    height: 100vh;
+    padding-bottom: 6rem;
+    position: relative;
+    min-height: 100vh;
+
 
 }
 
