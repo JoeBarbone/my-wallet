@@ -9,10 +9,10 @@ function About() {
 
             {/* <h3 id="home" className="mx-5">About My Wallet</h3> */}
             
-            <div className="container">
+            <div className="container my-5">
                 <div className="row d-flex justify-content-center">
                     
-                    <div className="col-sm-12 col-md-6 xcol-lg-4 xd-flex xflex-column xjustify-content-center hero-text">
+                    <div className="col-sm-12 col-md-6 hero-text">
                         <h1>
                             <p>About My Wallet</p>
                         </h1>
